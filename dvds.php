@@ -8,7 +8,7 @@ try
 
 catch (PDOException $e) 
 {
-    echo "Connection Error!: " . $e->getMessage();
+    echo "Connection Error!: " . $e->getMessage(); // connection error
     die();
 }
  
@@ -25,16 +25,17 @@ try
  
 }
 
-catch (PDOException $e) 
+catch (PDOException $e) //if query doesnt work, display error
 {
-	echo "<hr>";
+    echo "<hr>";
     echo "Query Error!: " . $e->getMessage();
     echo "<hr><pre>";
     print_r($e);
     die();
 }
 
-$originalDate = "08-27-2014";
-$newDate = date("D-M-y", strtotime($originalDate));
+// make the date change with varirable
+//$originalDate = "08-27-2014";
+//$newDate = date("D-M-y", strtotime($originalDate));
 
 ?>
