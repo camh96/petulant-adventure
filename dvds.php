@@ -8,7 +8,7 @@ try
 
 catch (PDOException $e) 
 {
-    echo "Connection Error!: " . $e->getMessage(); // connection error
+    echo "Connection Error!: " . $e->getMessage(); // if mysql cant connect, display reason for error
     die();
 }
  
